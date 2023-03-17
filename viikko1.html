@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Viikko 1</title>
+    <meta charset="UTF-8" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%22");
+
+
+      /*////////////////////
+        // Positioning items    
+        //////////////////////
+        
+        Reset *
+        Display: inline vs block
+        https://www.w3schools.com/cssref/pr_class_display.asp
+    
+        Box-sizing
+        https://www.w3schools.com/css/css3_box-sizing.asp
+        
+        Using percentages and max-width
+        https://www.w3schools.com/cssref/css_units.asp
+    
+        Float and clear
+        https://www.w3schools.com/cssref/pr_class_float.asp
+        
+        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
+        
+        Absolute/Relative positioning
+        https://www.w3schools.com/cssref/pr_class_position.asp
+          
+        Centering
+        https://www.w3schools.com/css/css_align.asp
+        
+        */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: lightgrey;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .box {
+        height: 100%;
+        width: 50%;
+
+        color: aliceblue;
+        padding: 10px;
+        float: left;
+      }
+
+      #white {
+        background-color: white;
+      }
+      #grey {
+        background-color: grey;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      /* img */
+      img {
+      }
+
+      /* container */
+      .container {
+        padding: 10px;
+      }
+
+      /* relative and absolute positioning with blue */
+      #blue {
+      }
+
+      p {
+        color: black;
+        font-family: "Open Sans", sans-serif;
+      }
+      .clear {
+        clear: both;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      header {
+        height: 100vh;
+      }
+      main {
+        margin: 30px 50px;
+      }
+      .card {
+        overflow: auto;
+        color: black;
+        width: 70%;
+        height: 60%;
+        background-color: grey;
+
+        margin: auto;
+        margin-top: 30%;
+        font-family: "Open Sans", sans-serif;
+      }
+      .kortti2 {
+        overflow: auto;
+        color: black;
+        width: 70%;
+        height: 60%;
+        background-color: lightgrey;
+        margin: auto;
+        margin-top: 30%;
+        font-family: "Open Sans", sans-serif;
+      }
+      .card-img {
+        width: 100%;
+        padding: 5px;
+      }
+      .Nappula {
+        border-radius: 25px;
+        width: 70px;
+        padding: 20px;
+        background-color: black;
+        color: aliceblue;
+      }
+      .Nappula:hover{
+        background-color: pink;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <header class="clearfix">
+      <div class="box" id="white">
+        <div class="card">
+          Upea kortti
+          <img class="card-img" src="img/doggems.jpg" alt="koira" />
+          <p>💕</p>
+        </div>
+      </div>
+
+      <div class="box" id="grey">
+        <div class="kortti2">
+          <h1>Media content</h1>
+          <ol>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
+              amet
+            </li>
+            <li>
+              dolorem quos totam quibusdam hic voluptatum tempore. Temporibus
+            </li>
+            <li>
+              debitis explicabo. Fuga obcaecati pariatur numquam tenetur quas?
+              Ullam similique vero nobis.
+            </li>
+            <li><input type="text" /></li>
+            <li><div class="Nappula">Paina mua</div></li>
+          </ol>
+        </div>
+      </div>
+    </header>
+    <!-- Float continues, clearing -->
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+
+    <div></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolore quod
+      corporis laudantium nobis voluptates tenetur corrupti natus? Impedit sed
+      necessitatibus doloremque porro consequatur repellat dignissimos sequi
+      suscipit numquam beatae.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae voluptatum
+      veritatis aut alias iste, laborum qui saepe deserunt sit, consectetur,
+      soluta atque ea assumenda exercitationem ullam hic ipsam fugit
+      voluptatibus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, itaque
+      dignissimos! Quaerat delectus deleniti atque qui asperiores aliquid error
+      explicabo quos, modi dolor commodi, corrupti maxime? Blanditiis deleniti
+      beatae exercitationem!
+    </p>
+
+    <!-- Responsive images and centering -->
+  </body>
+</html>
