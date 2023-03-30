@@ -1,0 +1,133 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%22");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: lightgrey;
+  font-family: "Open Sans", sans-serif;
+}
+
+.box {
+  height: 100%;
+  width: 50%;
+
+  color: aliceblue;
+  padding: 10px;
+  float: left;
+}
+
+#white {
+  background-color: white;
+}
+#grey {
+  background-color: grey;
+}
+
+.clear {
+  clear: both;
+}
+
+/* img */
+img {
+}
+
+/* container */
+.container {
+  padding: 10px;
+}
+
+/* relative and absolute positioning with blue */
+#blue {
+}
+
+p {
+  color: black;
+  font-family: "Open Sans", sans-serif;
+}
+.clear {
+  clear: both;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+header {
+  height: 100vh;
+}
+main {
+  margin: 30px 50px;
+}
+.card {
+  overflow: auto;
+  color: black;
+  width: 70%;
+  
+  background-color: grey;
+
+  margin: auto;
+  margin-top: 30%;
+  font-family: "Open Sans", sans-serif;
+}
+.kortti2 {
+  overflow: auto;
+  color: black;
+  width: 70%;
+  height: 60%;
+  background-color: lightgrey;
+  margin: auto;
+  margin-top: 30%;
+  font-family: "Open Sans", sans-serif;
+}
+.card-img {
+  width: 100%;
+  height: 80%;
+  padding: 5px;
+}
+.Nappula {
+  border-radius: 25px;
+  width: 70px;
+  padding: 20px;
+  background-color: black;
+  color: aliceblue;
+}
+.Nappula:hover{
+  background-color: pink;
+  color: black;
+  
+  
+}
+#puppies {
+    position: fixed;
+    text-align: center;
+    left: 50vw;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+#puppies p::after{
+    content: "\2193";
+    display: inline-block;
+    vertical-align: middle;
+}
+@media screen and (max-width: 1200px) {
+  .Nappula{
+    padding: 10px;
+  }  
+}
+@media screen and (max-width: 944px) {
+    li {
+        font-size: small;
+    }
+    h1 {
+        font-size: small;
+    }
+
+}
+@media screen and (max-width: 484px){
+    .box{
+        width: 100%;
+    }
+}
