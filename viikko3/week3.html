@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Positioning Items</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      /*////////////////////
+        // Positioning items
+        //////////////////////
+
+        Reset *
+        Display: inline vs block
+        https://www.w3schools.com/cssref/pr_class_display.asp
+
+        Box-sizing
+        https://www.w3schools.com/css/css3_box-sizing.asp
+
+        Using percentages and max-width
+        https://www.w3schools.com/cssref/css_units.asp
+
+        Float and clear
+        https://www.w3schools.com/cssref/pr_class_float.asp
+
+        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
+
+        Absolute/Relative positioning
+        https://www.w3schools.com/cssref/pr_class_position.asp
+
+        Centering
+        https://www.w3schools.com/css/css_align.asp
+
+        */
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap%22");
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+      html {
+        background: url(/viikko3/img/kivi.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      .wrapper {
+        background-color: white;
+        max-width: 900px;
+        margin: auto;
+        margin-top: 50px;
+        padding: 20px;
+      }
+      /* container */
+      .container {
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        height: 60vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #left {
+        background-color: rgb(45, 91, 63);
+        flex: 1;
+        display: flex;
+        padding-left: 10px;
+        flex-direction: column;
+      }
+      #right {
+        /*background-color: lightgray;*/
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .upper {
+        background-image: url(/viikko3/img/cattems.jpg);
+        background-size: cover;
+        background-position: center center;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex: 1;
+        clip-path: circle(65%);
+      }
+      .lower {
+        /*background-color: brown;*/
+        flex: 1;
+      }
+
+      /* relative and absolute positioning with blue */
+
+      .clear {
+        clear: both;
+      }
+
+      /* img */
+      img {
+      }
+      header {
+        flex: 1;
+        min-height: 60px;
+        border-bottom: 3px solid green;
+        margin-bottom: 5px;
+        display: flex;
+      }
+      footer {
+        display: flex;
+        justify-content: center;
+        background-color: lightgray;
+        height: 100px;
+        align-items: center;
+      }
+      @media screen and (max-width: 700px) {
+        .container {
+          background-color: white;
+          flex-direction: column-reverse;
+        }
+      }
+      svg {
+        height: 50px;
+        fill: green;
+      }
+      svg:hover {
+        fill: orange;
+      }
+      .button {
+        display: inline-block;
+        padding: 5px 15px;
+        font-size: 12px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: green;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 9px gray;
+      }
+
+      .button:hover {
+        background-color: green;
+      }
+
+      .button:active {
+        background-color: green;
+        box-shadow: 0 5px gray;
+        transform: translateY(4px);
+      }
+    
+#hLeft {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <div id="hleft" class="box">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+          <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64c11 0 21.8-1.4 32-4v4 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 448h56c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-53 0-96-43-96-96V192.5c0-16.1-12-29.8-28-31.8l-7.9-1c-17.5-2.2-30-18.2-27.8-35.7s18.2-30 35.7-27.8l7.9 1c48 6 84.1 46.8 84.1 95.3v85.3c34.4-51.7 93.2-85.8 160-85.8zm160 26.5v0c-10 3.5-20.8 5.5-32 5.5c-28.4 0-54-12.4-71.6-32h0c-3.7-4.1-7-8.5-9.9-13.2C357.3 164 352 146.6 352 128v0V32 12 10.7C352 4.8 356.7 .1 362.6 0h.2c3.3 0 6.4 1.6 8.4 4.2l0 .1L384 21.3l27.2 36.3L416 64h64l4.8-6.4L512 21.3 524.8 4.3l0-.1c2-2.6 5.1-4.2 8.4-4.2h.2C539.3 .1 544 4.8 544 10.7V12 32v96c0 17.3-4.6 33.6-12.6 47.6c-11.3 19.8-29.6 35.2-51.4 42.9zM432 128a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"
+          />
+        </svg>
+        <a href="">Home</a>
+        <a href="">Cats</a>  
+        </div> 
+       <div id="hright" class="box">
+        <button class="button">Login</button>
+       </div>
+        
+      </header>
+      <div class="container">
+        <div class="box" id="left">
+          <h2>Recent posts</h2>
+          <p>cattems</p>
+        </div>
+        <div class="box" id="right">
+          <div class="upper"></div>
+          <div class="lower">
+            <h3>Cool cat page</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error ad
+              ipsa possimus assumenda omnis eveniet, eos laborum corporis esse
+              facilis corrupti illo maiores optio, dolore ullam, repellendus
+              alias eius voluptatem?
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer>Tänne footer</footer>
+    </div>
+    <!-- Float continues, clearing -->
+
+    <!-- Responsive images and centering -->
+  </body>
+</html>
